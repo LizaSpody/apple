@@ -20,13 +20,12 @@ global $temp_html_dir;
 	   fontawesome,bootstrap,plugins and main style css
 	 ***************************************************-->
 
-	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/fontawesome.min.css" />
+	<!-- <link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/fontawesome.min.css" />
 	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/ionicons.min.css" />
 	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/simple-line-icons.css" />
 	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/plugins/jquery-ui.min.css">
-	<!-- <link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/bootstrap.min.css" /> -->
 	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/plugins/plugins.css" />
-	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/style.min.css" />
+	<link rel="stylesheet" href="<?php echo $temp_html_dir; ?>assets/css/style.min.css" /> -->
 
 	<!-- Use the minified version files listed below for better performance and remove the files listed above -->
 

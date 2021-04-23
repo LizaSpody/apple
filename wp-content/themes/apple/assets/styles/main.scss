@@ -1,1 +1,50 @@
-// @import "file";
+// Variables
+@import "./base/variables";
+
+// npm styles
+@import '~jquery-ui-bundle/jquery-ui.min.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@fortawesome/fontawesome-free/css/fontawesome.min.css';
+@import '~ionicons-npm/scss/ionicons';
+@import '~slick-carousel/slick/slick';
+@import '~simple-line-icons/scss/simple-line-icons';
+
+// Base
+@import "./base/mixins";
+@import "./base/functions";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/placeholder";
+@import "./base/overlay";
+@import "./base/background-&-colors";
+@import "./base/spacer";
+
+// Blocks
+@import "./layouts/blocks/main-content";
+@import "./layouts/blocks/header";
+@import "./layouts/blocks/footer";
+
+// Components
+@import "./components/buttons";
+@import "./components/title-section";
+@import "./components/badge";
+@import "./components/sticky-header";
+@import "./components/forms/search-form";
+@import "./components/cart-links";
+@import "./components/offcanvas-menu-toggler";
+@import "./components/offcanvas";
+@import "./components/offcanvas-cart";
+@import "./components/all-ctry-menu";
+@import "./components/scroll-up";
+
+// Pages
+@import "./layouts/pages/single-product";
+@import "./layouts/pages/blog";
+@import "./layouts/pages/shop";
+@import "./layouts/pages/about-us";
+@import "./layouts/pages/whishlist";
+@import "./layouts/pages/contact-us";
+@import "./layouts/pages/account";
+@import "./layouts/pages/check-out";
+@import "./layouts/pages/compare";
+@import "./layouts/pages/map";

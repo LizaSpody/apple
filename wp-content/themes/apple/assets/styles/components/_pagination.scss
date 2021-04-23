@@ -1,0 +1,56 @@
+nav.navigation {
+  margin-top: 30px;
+
+  h2 {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    margin: 0 auto;
+
+    span,
+    a {
+      font-family: $gilroyRegular;
+      display: block;
+      padding: 0;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      font-weight: fontweight(regular);
+      color: $color-dark !important;
+      background: $color-grey-light !important;
+      font-size: 18px;
+      text-align: center;
+      margin: 0 2px;
+      border: 0 !important;
+
+      @include border-radius(50% !important);
+    }
+
+    a {
+      &:hover {
+        color: $color-white !important;
+        background: $theme-color !important;
+      }
+
+      i {
+        font-size: 13px;
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    span {
+      &.current {
+        color: $color-white !important;
+        background: $theme-color !important;
+
+        &:hover {
+          color: $color-white !important;
+          background: $theme-color !important;
+        }
+      }
+    }
+  }
+}
