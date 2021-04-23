@@ -48,6 +48,29 @@ body {
   overflow-x: hidden;
 }
 
+#breadcrumbs {
+  text-align: center;
+
+  .sep {
+    display: inline-block;
+    margin: 0 5px;
+
+    &::before {
+      content: "\F3D3";
+      color: #707070 !important;
+      font-family: "Ionicons", sans-serif;
+      padding: 0 !important;
+      position: relative;
+      top: 2px;
+      font-size: 14px;
+    }
+  }
+
+  .breadcrumb_last {
+    color: $theme-color;
+  }
+}
+
 .container,
 .container-lg,
 .container-md,

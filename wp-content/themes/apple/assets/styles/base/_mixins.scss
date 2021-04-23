@@ -1,3 +1,7 @@
+@mixin media($px) {
+  @media (max-width: $px) { @content; }
+}
+
 @mixin transition($time) {
   transition: all $time;
 }

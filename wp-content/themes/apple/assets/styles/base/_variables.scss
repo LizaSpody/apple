@@ -18,6 +18,15 @@ $fontWeights: (
   "heavy": 900,
 );
 
+// Media queries breakpoints
+$xs: 0;
+$mobile_sm: 320px;
+$mobile: 375px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 // Paragraph spacing
 $paragraph-spacing: 0;
 
@@ -25,6 +34,7 @@ $paragraph-spacing: 0;
 $base-line-height: 24px;
 
 // theme colors
+
 $theme-color: #f33535;
 $theme-color2: #ff7519;
 $theme-color3: #10a341;
