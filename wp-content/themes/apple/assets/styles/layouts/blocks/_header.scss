@@ -3,3 +3,11 @@
 @import "../../components/nav/mega-menu";
 @import "../../components/nav/sub-menu";
 @import "../../components/nav/verticle-menu";
+
+header {
+  .logo {
+    img {
+      max-height: 80px;
+    }
+  }
+}
