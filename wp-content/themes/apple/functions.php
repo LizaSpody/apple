@@ -10,3 +10,4 @@ require_once THEME_DIR .'/inc/helpers/theme.php';
 require_once THEME_DIR .'/inc/wp/enqueue_scripts.php';
 require_once THEME_DIR .'/inc/wp/theme_support.php';
 require_once THEME_DIR .'/inc/hooks/images.php';
+require_once THEME_DIR .'/inc/acf/options_page.php';
