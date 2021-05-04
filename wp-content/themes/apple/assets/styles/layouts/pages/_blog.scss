@@ -26,6 +26,18 @@
   }
 }
 
+.blog-post-content {
+  .sub-title {
+    a {
+      color: $theme-color;
+    }
+
+    ul.post-categories {
+      display: inline-block;
+    }
+  }
+}
+
 /* blog left sidebar */
 
 .sidebar-widget .post-title {
