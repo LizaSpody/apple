@@ -167,26 +167,6 @@ HTML;
 	}
 
 	/**
-	 * Search
-	 */
-	function get_search() {
-		$block = <<<HTML
-<div class="col-lg-5 col-xl-6 order-lg-first">
-	<div class="search-form pt-30 pt-lg-0">
-		<form class="form-inline position-relative">
-			<input class="form-control theme1-border" type="search"
-				   placeholder="Enter your search key ...">
-			<button class="btn search-btn theme-bg btn-rounded" type="submit"><i
-					class="icon-magnifier"></i></button>
-		</form>
-	</div>
-</div>
-HTML;
-
-		return $block;
-	}
-
-	/**
 	 * Mobile menu
 	 */
 	function get_mobile_menu() {
@@ -442,117 +422,18 @@ HTML;
 	function get_main_menu() {
 		global $temp_html_dir;
 
+		$main_menu = wp_nav_menu(array(
+			'echo' => false,
+			'theme_location' => 'main_menu',
+			'menu_class' => 'main-menu d-flex'
+		));
+
 		$block = <<<HTML
 <nav id="sticky" class="header-bottom theme1 d-none d-lg-block">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-10 offset-lg-2 d-flex flex-wrap align-items-center position-relative">
-				<ul class="main-menu d-flex">
-					<li class="active ml-0">
-						<a href="#" class="pl-0">Home <i class="ion-ios-arrow-down"></i></a>
-						<ul class="sub-menu">
-							<li><a href="index.html">Home 1</a></li>
-							<li><a href="index-2.html">Home 2</a></li>
-							<li><a href="index-3.html">Home 3</a></li>
-							<li><a href="index-4.html">Home 4</a></li>
-						</ul>
-					</li>
-					<li class="position-static">
-						<a href=" #">Shop <i class="ion-ios-arrow-down"></i></a>
-						<ul class="mega-menu row">
-							<li class="col-3">
-								<ul>
-									<li class="mega-menu-title"><a href="#">Shop Grid</a></li>
-									<li><a href="shop-grid-3-column.html">Shop Grid 3 Column</a></li>
-									<li><a href="shop-grid-4-column.html">Shop Grid 4 Column</a></li>
-									<li><a href="shop-grid-left-sidebar.html">Shop Grid Left Sidebar</a></li>
-									<li><a href="shop-grid-right-sidebar.html">Shop Grid Right Sidebar</a></li>
-								</ul>
-							</li>
-							<li class="col-3">
-								<ul>
-									<li class="mega-menu-title"><a href="#">Shop List</a></li>
-									<li><a href="shop-grid-list.html">Shop List</a></li>
-									<li><a href="shop-grid-list-left-sidebar.html">Shop List Left Sidebar</a>
-									</li>
-									<li><a href="shop-grid-list-right-sidebar.html">Shop List Right Sidebar</a>
-									</li>
-								</ul>
-							</li>
-							<li class="col-3">
-								<ul>
-									<li class="mega-menu-title"><a href="#">Shop Single</a></li>
-									<li><a href="single-product.html">Shop Single</a></li>
-									<li><a href="single-product-configurable.html">Shop Variable</a></li>
-									<li><a href="single-product-affiliate.html">Shop Affiliate</a></li>
-									<li><a href="single-product-group.html">Shop Group</a></li>
-								</ul>
-							</li>
-							<li class="col-3">
-								<ul>
-									<li class="mega-menu-title"><a href="#">other pages</a></li>
-									<li><a href="about-us.html">About Page</a></li>
-									<li><a href="cart.html">Cart Page</a></li>
-									<li><a href="checkout.html">Checkout Page</a></li>
-									<li><a href="compare.html">Compare Page</a></li>
-								</ul>
-							</li>
-							<li class="col-6 mt-4">
-								<a href="single-product.html" class="zoom-in overflow-hidden"><img
-										src="{$temp_html_dir}assets/img/mega-menu/1.jpg" alt="img"></a>
-							</li>
-							<li class="col-6 mt-4">
-								<a href="single-product.html" class="zoom-in overflow-hidden"><img
-										src="{$temp_html_dir}assets/img/mega-menu/2.jpg" alt="img"></a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Pages <i class="ion-ios-arrow-down"></i></a>
-						<ul class="sub-menu">
-							<li><a href="about-us.html">About Page</a></li>
-							<li><a href="cart.html">Cart Page</a></li>
-							<li><a href="checkout.html">Checkout Page</a></li>
-							<li><a href="compare.html">Compare Page</a></li>
-							<li><a href="login.html">Login &amp; Register Page</a></li>
-							<li><a href="myaccount.html">Account Page</a></li>
-							<li><a href="wishlist.html">Wishlist Page</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Blog <i class="ion-ios-arrow-down"></i></a>
-						<ul class="sub-menu">
-							<li>
-								<a href="#">Blog Grid</a>
-								<ul class="sub-menu">
-									<li><a href="blog-grid-3-column.html">Blog Grid 3 column</a></li>
-									<li><a href="blog-grid-4-column.html">Blog Grid 4 column</a></li>
-									<li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-									<li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Blog List</a>
-								<ul class="sub-menu">
-									<li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-									<li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Blog Single</a>
-								<ul class="sub-menu">
-									<li><a href="single-blog.html">Single Blog</a></li>
-									<li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a>
-									</li>
-									<li><a href="blog-single-right-sidebar.html">Blog Single Right Sidbar</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="contact.html">contact Us</a></li>
-				</ul>
-
+				{$main_menu}
 			</div>
 		</div>
 	</div>

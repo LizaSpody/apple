@@ -38,8 +38,10 @@ global $temp_html_dir;
 				<?php
 					echo $header->get_logo();
 					echo $header->get_main_icons(); // TODO: not ready yet
-					echo $header->get_search(); // TODO: not ready yet
 				?>
+				<div class="col-lg-5 col-xl-6 order-lg-first">
+					<?php get_search_form(); ?>
+				</div>
 			</div>
 		</div>
 	</div>
