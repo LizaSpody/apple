@@ -9,57 +9,11 @@ global $temp_html_dir;
 			<div class="row">
 				<div class="col-12 col-md-6 col-lg-4 mb-30">
 					<div class="footer-widget mx-w-400">
-						<div class="footer-logo mb-35">
-							<a href="index.html">
-								<img src="<?php echo $temp_html_dir; ?>assets/img/logo/logo-dark.jpg" alt="footer logo">
-							</a>
-						</div>
-						<p class="text mb-30">We are a team of designers and developers that create high quality
-							Magento, Prestashop, Opencart.</p>
-						<div class="address-widget mb-30">
-							<div class="media">
-                                <span class="address-icon mr-3">
-                                    <img src="<?php echo $temp_html_dir; ?>assets/img/icon/phone.png" alt="phone">
-                                </span>
-								<div class="media-body">
-									<p class="help-text text-uppercase">NEED HELP?</p>
-									<h4 class="title text-dark"><a href="tel:+1(123)8889999">(+800) 345 678</a></h4>
-								</div>
-							</div>
-						</div>
-
-						<div class="social-network">
-							<ul class="d-flex">
-								<li><a href="https://www.facebook.com/" target="_blank"><span
-											class="icon-social-facebook"></span></a></li>
-								<li><a href="https://twitter.com/" target="_blank"><span
-											class="icon-social-twitter"></span></a></li>
-								<li><a href="https://www.youtube.com/" target="_blank"><span
-											class="icon-social-youtube"></span></a></li>
-								<li class="mr-0"><a href="https://www.instagram.com/" target="_blank"><span
-											class="icon-social-instagram"></span></a></li>
-							</ul>
-						</div>
+						<?php dynamic_sidebar('footer-col-1'); ?>
 					</div>
 				</div>
 				<div class="col-12 col-md-6 col-lg-2 mb-30">
-					<div class="footer-widget">
-						<div class="border-bottom cbb1 mb-25">
-							<div class="section-title pb-20">
-								<h2 class="title text-dark text-uppercase">Information</h2>
-							</div>
-						</div>
-						<!-- footer-menu start -->
-						<ul class="footer-menu">
-							<li><a href="#">Delivery</a></li>
-							<li><a href="about-us.html">About us</a></li>
-							<li><a href="#">Secure payment</a></li>
-							<li><a href="contact.html">Contact us</a></li>
-							<li><a href="#">Sitemap</a></li>
-							<li><a href="#">Stores</a></li>
-						</ul>
-						<!-- footer-menu end -->
-					</div>
+					<?php dynamic_sidebar('footer-col-2'); ?>
 				</div>
 				<div class="col-12 col-md-6 col-lg-2 mb-30">
 					<div class="footer-widget">
@@ -313,7 +267,7 @@ global $temp_html_dir;
 					<div class="col-lg-5 divide-right">
 						<div class="row">
 							<div class="col-md-6">
-								<img src="assets/img/modal/1.jpg" alt="img">
+								<img src="<?php echo $temp_html_dir; ?>assets/img/modal/1.jpg" alt="img">
 							</div>
 							<div class="col-md-6 mb-2 mb-md-0">
 								<h4 class="product-name">New Balance Running Arishi trainers in triple</h4>
