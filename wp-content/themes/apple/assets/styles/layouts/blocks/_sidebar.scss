@@ -1,0 +1,23 @@
+.main_sidebar {
+  .tagcloud {
+    a {
+      font-family: $gilroyRegular;
+      font-weight: 400;
+      text-transform: capitalize;
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 14px !important;
+      line-height: 20px;
+      color: #1d1d1d;
+      border: 1px solid #ebebeb;
+      background: #fff;
+      margin: 4px;
+      border-radius: 30px;
+
+      &:hover {
+        background: $theme-color;
+        color: #fff;
+      }
+    }
+  }
+}
