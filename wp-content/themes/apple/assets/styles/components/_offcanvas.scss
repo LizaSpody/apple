@@ -101,7 +101,7 @@ body {
     }
 
     &:hover::after {
-      @include transform(rotate(0));
+      @include transform(rotate(0deg));
     }
 
     &::before {
@@ -141,7 +141,7 @@ body {
         line-height: 30px;
       }
 
-      .sub-menu {
+      .offcanvas-submenu {
         position: static;
         top: auto;
         display: none;
@@ -151,7 +151,6 @@ body {
         transition: none;
         opacity: 1;
         box-shadow: none;
-        transform: none;
 
         li {
           line-height: inherit;
@@ -193,7 +192,7 @@ body {
         }
 
         &::after {
-          @include transform(rotate(90));
+          @include transform(rotate(90deg));
         }
       }
 

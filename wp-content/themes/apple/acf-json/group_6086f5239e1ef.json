@@ -47,7 +47,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "medium",
+                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -159,7 +159,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "medium",
+                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -263,10 +263,10 @@
                     "button_label": "",
                     "sub_fields": [
                         {
-                            "key": "field_6086f87592481",
-                            "label": "Icon class",
-                            "name": "icon_class",
-                            "type": "text",
+                            "key": "field_6088437079206",
+                            "label": "Social Network Name",
+                            "name": "social_network_name",
+                            "type": "select",
                             "instructions": "",
                             "required": 1,
                             "conditional_logic": 0,
@@ -275,11 +275,19 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "choices": {
+                                "icon-social-facebook": "Facebook",
+                                "icon-social-twitter": "Twitter",
+                                "icon-social-youtube": "YouTube",
+                                "icon-social-instagram": "Instagram"
+                            },
+                            "default_value": false,
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
                         },
                         {
                             "key": "field_6086f8af92482",
@@ -319,5 +327,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619458295
+    "modified": 1619543037
 }

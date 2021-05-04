@@ -1,11 +1,14 @@
+// npm scripts
 import 'jquery-ui-bundle/jquery-ui.min';
 import 'slick-carousel/slick/slick.min';
-import './plugins/slick-animation';
 import 'popper.js/dist/popper.min';
 import 'jquery-countdown/dist/jquery.countdown.min';
 import 'jquery.scrollup/dist/jquery.scrollUp.min';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '@fortawesome/fontawesome-free/js/all.min';
+
+// Local scripts
+import './plugins/slick-animation';
 
 "use strict";
 
