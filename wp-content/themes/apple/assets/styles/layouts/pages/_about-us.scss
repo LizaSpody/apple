@@ -1,14 +1,82 @@
-.about-content .title {
-  font-size: 34px;
-  font-family: $gilroyMedium;
-  font-weight: fontweight(medium);
-  color: $color-dark;
-  text-transform: capitalize;
-}
+body.page-template-about {
+  section {
+    font-size: 16px;
+    margin: 25px 0;
+  }
 
-.about-info .title {
-  font-size: 34px;
-  font-family: $gilroyMedium;
-  font-weight: fontweight(medium);
-  color: $color-dark;
+  section.flex_text_image_2_col {
+    .container .row {
+      align-items: center;
+    }
+
+    .flex_image {
+      width: 50%;
+    }
+
+    .flex_text {
+      width: 50%;
+
+      h2 {
+        color: #111;
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  section.flex_stats {
+    margin: 60px 0;
+
+    .stats_list {
+      display: flex;
+      flex-wrap: wrap;
+
+      .stat_item {
+        width: 33.33%;
+        padding: 30px;
+
+        .stat_title {
+          position: relative;
+          font-size: 16px;
+          font-weight: bold;
+          color: #111;
+          padding: 7px 0 15px 50px;
+
+          .icon {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            width: 35px;
+            height: 35px;
+            top: 0;
+            left: 0;
+
+            &.icon_1 {
+              background-image: url(../images/pages/about/icon_1.svg);
+            }
+
+            &.icon_2 {
+              background-image: url(../images/pages/about/icon_2.svg);
+            }
+
+            &.icon_3 {
+              background-image: url(../images/pages/about/icon_3.svg);
+            }
+
+            &.icon_4 {
+              background-image: url(../images/pages/about/icon_4.svg);
+            }
+          }
+        }
+
+        .stat_description {
+          //
+        }
+      }
+    }
+  }
 }
