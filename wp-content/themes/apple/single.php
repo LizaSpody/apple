@@ -27,6 +27,8 @@ echo get_theme_page_title_block($post_title);
 						<?php echo $post_content; ?>
 					</div>
 				</div>
+
+				<?php comments_template(); ?>
 			</div>
 		</div>
 	</div>
