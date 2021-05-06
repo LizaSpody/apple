@@ -1,0 +1,63 @@
+.team_page {
+  .team_departments {
+    padding: 20px 0;
+
+    ul {
+      text-align: center;
+
+      li {
+        display: inline-block;
+
+        a {
+          font-size: 20px;
+          color: $theme-color;
+          padding: 10px 12px;
+          border-radius: 10px;
+
+          &.active {
+            background: $theme-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .team_lists {
+    .department_list {
+      flex-wrap: wrap;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .list_inner {
+        display: flex;
+
+        a.team_member {
+          width: 20%;
+          padding: 20px;
+
+          .team_avatar {
+            border-radius: 50%;
+            overflow: hidden;
+          }
+
+          .team_name {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px;
+          }
+
+          .team_position {
+            text-transform: uppercase;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
