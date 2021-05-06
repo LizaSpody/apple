@@ -13,6 +13,8 @@
   "images/pages/about/icon_2.svg": "images/pages/about/icon_2_bd1fceda.svg",
   "images/pages/about/icon_3.svg": "images/pages/about/icon_3_f49aa164.svg",
   "images/pages/about/icon_4.svg": "images/pages/about/icon_4_b76a1d8a.svg",
+  "images/pages/team/no_avatar.jpg": "images/pages/team/no_avatar_ebb072c9.jpg",
+  "images/reply.svg": "images/reply_7804cc15.svg",
   "vendor/Simple-Line-Icons.eot?v=2.4.0": "vendor/Simple-Line-Icons_f33df365.eot",
   "vendor/Simple-Line-Icons.svg?v=2.4.0": "vendor/Simple-Line-Icons_2a103029.svg",
   "vendor/Simple-Line-Icons.ttf?v=2.4.0": "vendor/Simple-Line-Icons_d2285965.ttf",
@@ -24,6 +26,6 @@
   "vendor/ui-icons_777777_256x240.png": "vendor/ui-icons_777777_256x240_6d28e77d.png",
   "vendor/ui-icons_cc0000_256x240.png": "vendor/ui-icons_cc0000_256x240_bd6996f9.png",
   "vendor/ui-icons_ffffff_256x240.png": "vendor/ui-icons_ffffff_256x240_e33c878c.png",
-  "styles/main.css": "styles/main_b4b81ce8.css",
-  "scripts/main.js": "scripts/main_b4b81ce8.js"
+  "styles/main.css": "styles/main_d871248b.css",
+  "scripts/main.js": "scripts/main_d871248b.js"
 }
