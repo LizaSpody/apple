@@ -1,3 +1,27 @@
+body.page-template-contacts {
+  .form-group {
+    & > span {
+      display: block;
+    }
+
+    .wpcf7-submit {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      color: #fff;
+      background: #1d1d1d;
+      padding: 15px 30px;
+      font-family: $gilroyBold;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+      border-radius: 5px;
+      box-sizing: content-box;
+    }
+  }
+}
+
 .form-control:focus {
   box-shadow: none;
 }
