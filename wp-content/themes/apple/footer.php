@@ -47,14 +47,8 @@ global $temp_html_dir;
 						</div>
 						<p class="text mb-20">You may unsubscribe at any moment. For that purpose, please find our
 							contact info in the legal notice.</p>
-						<div class="nletter-form mb-35">
-							<form class="form-inline position-relative"
-								  action="http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef"
-								  target="_blank" method="post">
-								<input class="form-control" type="text" placeholder="Your email address">
-								<button class="btn nletter-btn text-capitalize" type="submit">Sign
-									up</button>
-							</form>
+						<div class="subscription_block nletter-form mb-35">
+							<?php echo do_shortcode('[contact-form-7 id="111" title="Subscription block (Footer)"]'); ?>
 						</div>
 
 						<div class="store d-flex">

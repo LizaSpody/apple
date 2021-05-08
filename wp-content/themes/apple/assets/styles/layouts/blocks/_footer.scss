@@ -41,6 +41,25 @@
   }
 }
 
+footer {
+  .subscription_block {
+    .wpcf7-submit {
+      background: #f33535;
+      border: 0 solid #f33535;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: 400;
+      font-size: 14px;
+      color: #fff;
+      padding: 0 20px;
+      line-height: 47px;
+      height: 47px;
+      border-radius: 0 30px 30px 0;
+    }
+  }
+}
+
 // theme1
 .theme1 {
   .social-network {
