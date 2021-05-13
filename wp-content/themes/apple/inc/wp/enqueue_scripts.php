@@ -27,3 +27,9 @@ function theme_scripts() {
 	wp_localize_script('main-javascript', 'themeVars', $theme_vars);
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
+
+// Admin CSS
+function load_admin_styles() {
+	wp_enqueue_style('admin-css', THEME_DIR_URI .'/assets/styles/admin.css');
+}
+add_action('admin_enqueue_scripts', 'load_admin_styles');

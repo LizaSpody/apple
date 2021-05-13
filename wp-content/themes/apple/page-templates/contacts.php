@@ -1,14 +1,31 @@
 <?php
 /* Template Name: Contacts page */
 
+$map = get_field('map');
+
+var_dump($map);
+
+$html_map = null;
+if(!empty($map)) {
+	$map_lat = esc_attr($map['lat']);
+	$map_lng = esc_attr($map['lng']);
+
+	$html_map = <<<HTML
+<div class="acf-map" data-zoom="16">
+	<div class="marker" data-lat="{$map_lat}" data-lng="{$map_lng}"></div>
+</div>
+HTML;
+}
+
+init_google_map();
+
 get_header();
 
 echo get_theme_page_title_block(get_the_title());
 ?>
 
 <div class="map">
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.5480490037507!2d90.42897841550803!3d23.76349088458297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c78ab2187d4d%3A0x4d5f8a6c610c144b!2sHasTech%20Digital%20Item%20%26%20Service%20Provider!5e0!3m2!1sen!2sua!4v1595747193974!5m2!1sen!2sua"></iframe>
+	<?php echo $html_map; ?>
 </div>
 
 <section class="contact-section pt-80 pb-50">

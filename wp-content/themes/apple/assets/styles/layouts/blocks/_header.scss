@@ -5,9 +5,33 @@
 @import "../../components/nav/verticle-menu";
 
 header {
-  .logo {
-    img {
-      max-height: 80px;
+  .header-top {
+    nav.navbar-top ul {
+      & > li.wpml-ls-item {
+        &:hover {
+          & > ul.sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            min-width: 135px;
+            right: 0;
+
+            li {
+              a {
+                color: #111;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-middle {
+    .logo {
+      img {
+        max-height: 80px;
+      }
     }
   }
 }

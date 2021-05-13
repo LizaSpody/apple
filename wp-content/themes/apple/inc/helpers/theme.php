@@ -21,3 +21,10 @@ HTML;
 
 	return $block;
 }
+
+function init_google_map() {
+	function js_google_map() {
+		wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCwLTmY1_m0bKSvjcojpsbQqP-rQrYnwLg', [], null, true);
+	}
+	add_action('wp_enqueue_scripts', 'js_google_map');
+}

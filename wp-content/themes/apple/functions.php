@@ -25,3 +25,8 @@ require_once THEME_DIR .'/inc/acf/options_page.php';
 
 # Shortcodes
 require_once THEME_DIR .'/inc/shortcodes/footer_shortcodes.php';
+
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyCwLTmY1_m0bKSvjcojpsbQqP-rQrYnwLg');
+}
+add_action('acf/init', 'my_acf_init');

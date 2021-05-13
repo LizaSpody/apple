@@ -12,6 +12,12 @@ class ThemeHeader {
 	function get_header_top() {
 		global $temp_html_dir;
 
+		$top_menu = wp_nav_menu(array(
+			'echo' => false,
+			'theme_location' => 'top_menu',
+			'menu_class' => 'd-flex justify-content-center justify-content-md-end align-items-center'
+		));
+
 		$block = <<<HTML
 <div class="header-top theme1 bg-dark py-15">
 	<div class="container">
@@ -24,6 +30,9 @@ class ThemeHeader {
 			</div>
 			<div class="col-lg-6 col-md-5">
 				<nav class="navbar-top pb-2 pb-md-0 position-relative">
+					{$top_menu}
+
+					<!--
 					<ul class="d-flex justify-content-center justify-content-md-end align-items-center">
 						<li>
 							<a href="#" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
@@ -60,6 +69,7 @@ class ThemeHeader {
 							</ul>
 						</li>
 					</ul>
+					-->
 				</nav>
 			</div>
 		</div>

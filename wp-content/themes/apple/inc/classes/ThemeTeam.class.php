@@ -46,8 +46,11 @@ class ThemeTeam {
 		// Получение всех кастомных постов Team
 		$team_data = get_posts(array(
 			'post_type' => 'team',
-			'numberposts' => -1
+			'numberposts' => -1,
+			'suppress_filters' => false,
 		));
+
+		//var_dump($team_data);
 
 		// Перебор в цикле каждого сотрудника
 		foreach($team_data as $team_item) {

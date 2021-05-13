@@ -10,6 +10,7 @@ import '@fortawesome/fontawesome-free/js/all.min';
 // Local scripts
 import './plugins/slick-animation';
 import './pages/team';
+import './pages/map';
 
 "use strict";
 
