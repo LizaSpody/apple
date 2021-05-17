@@ -6,11 +6,14 @@ import 'jquery-countdown/dist/jquery.countdown.min';
 import 'jquery.scrollup/dist/jquery.scrollUp.min';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '@fortawesome/fontawesome-free/js/all.min';
+import 'select2/dist/js/select2.min';
+import 'chart.js/dist/Chart.min';
 
 // Local scripts
 import './plugins/slick-animation';
 import './pages/team';
 import './pages/map';
+import './pages/covid';
 
 "use strict";
 
