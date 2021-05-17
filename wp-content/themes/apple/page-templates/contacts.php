@@ -1,9 +1,10 @@
 <?php
 /* Template Name: Contacts page */
 
+/**
+ * Map
+ */
 $map = get_field('map');
-
-var_dump($map);
 
 $html_map = null;
 if(!empty($map)) {
@@ -18,6 +19,12 @@ HTML;
 }
 
 init_google_map();
+
+/**
+ * Contact form
+ */
+$contact_form_id = get_field('contact_form');
+
 
 get_header();
 
@@ -78,9 +85,7 @@ echo get_theme_page_title_block(get_the_title());
 			<div class="col-lg-6 col-12 mb-30">
 				<!--  contact form content -->
 				<div class="contact-form-content">
-					<h3 class="contact-page-title">Tell Us Your Message</h3>
-
-					<?php echo do_shortcode('[contact-form-7 id="110" title="Feedback form (Contacts page)"]') ?>
+					<?php echo do_shortcode('[contact-form-7 id="'. $contact_form_id .'"]') ?>
 
 					<p class="form-messegemt-10"></p>
 				</div>

@@ -19,6 +19,28 @@
             "center_lng": "",
             "zoom": "",
             "height": ""
+        },
+        {
+            "key": "field_609ea119a9480",
+            "label": "Contact form",
+            "name": "contact_form",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -40,5 +62,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620749687
+    "modified": 1621009186
 }

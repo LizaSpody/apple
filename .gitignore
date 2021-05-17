@@ -1,3 +1,4 @@
 .idea
 credentials.php
 /wp-content/uploads/cache/
+/wp-content/cache/

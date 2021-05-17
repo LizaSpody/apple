@@ -130,6 +130,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.2",
     "bootstrap": "^5.0.0-alpha1",
+    "chart.js": "^2.9.4",
     "ionicons-npm": "^2.0.1",
     "jquery": "^3.3.1",
     "jquery-countdown": "^2.2.0",
@@ -138,6 +139,7 @@
     "jquery.scrollup": "^2.4.1",
     "modernizr": "^3.11.4",
     "popper.js": "^1.14.3",
+    "select2": "^4.1.0-rc.0",
     "simple-line-icons": "^2.5.5",
     "slick-carousel": "^1.8.1"
   }
