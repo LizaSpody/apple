@@ -158,6 +158,12 @@ span {
   display: inline-block;
 }
 
+.woocommerce {
+  span {
+    display: inline !important;
+  }
+}
+
 span {
   &.separator {
     color: $separator-color;
@@ -302,5 +308,23 @@ span.required {
 
   @include min-screen(768) {
     max-width: 50%;
+  }
+}
+
+.ion-ios-star {
+  &.active {
+    color: $theme-color;
+  }
+}
+
+.subcategories {
+  .subcategories_list {
+    display: flex;
+    width: 100%;
+
+    li {
+      width: 33.33%;
+      opacity: 1;
+    }
   }
 }

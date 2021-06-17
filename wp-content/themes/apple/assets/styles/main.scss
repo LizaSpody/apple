@@ -8,6 +8,7 @@
 @import '~ionicons-npm/scss/ionicons';
 @import '~slick-carousel/slick/slick';
 @import '~simple-line-icons/scss/simple-line-icons';
+@import '~select2/dist/css/select2.min.css';
 
 // Base
 @import "./base/mixins";
@@ -23,6 +24,7 @@
 @import "./layouts/blocks/main-content";
 @import "./layouts/blocks/header";
 @import "./layouts/blocks/sidebar";
+@import "./layouts/blocks/sidebar_store";
 @import "./layouts/blocks/footer";
 
 // Components

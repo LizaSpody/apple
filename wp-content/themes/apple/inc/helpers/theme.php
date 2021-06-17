@@ -1,6 +1,17 @@
 <?php
 function get_theme_page_title_block($title, $has_breadcrumbs = true) {
-	$breadcrumbs = yoast_breadcrumb( '<div id="breadcrumbs">','</div>', false );
+	if(is_woocommerce()) {
+		ob_start();
+		woocommerce_breadcrumb(array(
+			'delimiter' => '<div class="sep"></div>',
+			'wrap_before' => '<div id="breadcrumbs">',
+			'wrap_after' => '</div>'
+		));
+		$breadcrumbs = ob_get_contents();
+		ob_end_clean();
+	} else {
+		$breadcrumbs = yoast_breadcrumb( '<div id="breadcrumbs">','</div>', false );
+	}
 
 	$html_breadcrumbs = ($has_breadcrumbs) ? '<div class="col-12">'. $breadcrumbs .'</div>' : null;
 

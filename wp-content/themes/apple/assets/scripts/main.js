@@ -1,3 +1,5 @@
+/* global wc_add_to_cart_params */
+
 // npm scripts
 import 'jquery-ui-bundle/jquery-ui.min';
 import 'slick-carousel/slick/slick.min';
@@ -49,30 +51,53 @@ import './pages/covid';
 			  Off Canvas toggler Function
 		  -----------------------------------*/
 
-	var $offCanvasToggle = $(".offcanvas-toggle"),
-		$offCanvas = $(".offcanvas"),
-		$offCanvasOverlay = $(".offcanvas-overlay"),
-		$mobileMenuToggle = $(".mobile-menu-toggle");
-	$offCanvasToggle.on("click", function (e) {
-		e.preventDefault();
-		var $this = $(this),
-			$target = $this.attr("href");
+	function open_mini_cart() {
+		/*var $this = $('.header_cart_icon');
 		$body.addClass("offcanvas-open");
-		$($target).addClass("offcanvas-open");
-		$offCanvasOverlay.fadeIn();
+		$('#offcanvas-cart').addClass("offcanvas-open");
+		$(".offcanvas-overlay").fadeIn();
 
 		if ($this.parent().hasClass("mobile-menu-toggle")) {
 			$this.addClass("close");
-		}
-	});
-	$(".offcanvas-close, .offcanvas-overlay").on("click", function (e) {
+		}*/
+
+		let mini_cart = $('#offcanvas-cart');
+
+		$body.addClass("offcanvas-open");
+
+		$('.offcanvas-overlay').fadeIn();
+
+		mini_cart.addClass('offcanvas-open');
+	}
+
+	$(document).on("click", '.header_cart_icon', function (e) {
 		e.preventDefault();
-		$body.removeClass("offcanvas-open");
-		$offCanvas.removeClass("offcanvas-open");
-		$offCanvasOverlay.fadeOut();
-		$mobileMenuToggle.find("a").removeClass("close");
+
+		open_mini_cart();
+		/*var $this = $(this),
+			$target = $this.attr("href");
+		$body.addClass("offcanvas-open");
+		$($target).addClass("offcanvas-open");
+		$(".offcanvas-overlay").fadeIn();
+
+		if ($this.parent().hasClass("mobile-menu-toggle")) {
+			$this.addClass("close");
+		}*/
 	});
 
+	$('body').on('added_to_cart', function() {
+		setTimeout(function() {
+			open_mini_cart();
+		}, 100);
+	});
+
+	$(document).on('click', '.offcanvas-close, .offcanvas-overlay', function (e) {
+		e.preventDefault();
+		$body.removeClass("offcanvas-open");
+		$('.offcanvas').removeClass("offcanvas-open");
+		$(".offcanvas-overlay").fadeOut();
+		$(".mobile-menu-toggle").find("a").removeClass("close");
+	});
 	/*----------------------------------
 			 Off Canvas Menu
 		 -----------------------------------*/
@@ -880,4 +905,74 @@ import './pages/covid';
 	} else {
 		scrollUp.addClass("theme-default");
 	}
+
+	/**
+	 * Add to cart on single product page
+	 */
+	$('form.cart').on('submit', function(e) {
+		e.preventDefault();
+
+		var form   = $(this),
+			product_id = form.find('.single_add_to_cart_button').val(),
+			form_data  = form.serializeArray();
+
+		form_data.push({name: 'product_id', value: product_id});
+
+		$.ajax({
+			type: 'POST',
+			url: wc_add_to_cart_params.wc_ajax_url.toString().replace( '%%endpoint%%', 'add_to_cart' ),
+			data: form_data,
+			success: function( response ) {
+				if ( ! response ) {
+					return;
+				}
+
+				if(response.error && response.product_url ) {
+					window.location = response.product_url;
+					return;
+				}
+
+				// Trigger event so themes can refresh other areas.
+				$( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, form ] );
+			},
+			dataType: 'json',
+		});
+	});
+
+
+	/**
+	 * Add to wishlist fragments
+	 */
+	$(document).on('added_to_wishlist removed_from_wishlist', function() {
+		ajax_get_wishlist_count();
+	});
+
+	function ajax_get_wishlist_count() {
+		$.ajax({
+			url: themeVars.ajaxurl,
+			type: 'get',
+			dataType: 'json',
+			data: {
+				action: 'get_wishlist_count',
+			},
+			success: function(data) {
+				$.each(data, function(k, v) {
+					$(k).empty().append(v);
+					sessionStorage.setItem('wishlist_count', v);
+				});
+			},
+		});
+	}
+
+	/**
+	 * Get wishlist count on page load
+	 */
+	let wishlist_count = sessionStorage.getItem('wishlist_count');
+
+	if(wishlist_count == null) {
+		ajax_get_wishlist_count();
+	} else {
+		$('.header_wishlist_icon .badge').text(wishlist_count);
+	}
+
 })(jQuery);

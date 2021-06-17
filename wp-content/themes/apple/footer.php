@@ -296,39 +296,6 @@ global $temp_html_dir;
 <!-- modals end -->
 
 
-<!--***********************
-	all js files
- ***********************-->
-
-<!--******************************************************
-	jquery,modernizr ,poppe,bootstrap,plugins and main js
- ******************************************************-->
-
-<!--
-<script src="<?php echo $temp_html_dir; ?>assets/js/vendor/jquery-3.5.1.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/vendor/modernizr-3.7.1.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/popper.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/plugins/jquery-ui.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/plugins/plugins.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/main.js"></script>
--->
-
-<!-- Use the minified version files listed below for better performance and remove the files listed above -->
-
-<!--***************************
-	  Minified  js
- ***************************-->
-
-<!--***********************************
-	 vendor,plugins and main js
-  ***********************************-->
-
-<!-- <script src="<?php echo $temp_html_dir; ?>assets/js/vendor/vendor.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/plugins/plugins.min.js"></script>
-<script src="<?php echo $temp_html_dir; ?>assets/js/main.js"></script> -->
-
-
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,7 +1,14 @@
 /* global Chart */
 $(document).ready(function() {
 if($('.covid_page').length > 0) {
+	/**
+	 * Countries list
+	 */
+	$('.covid_page .countries_list select').select2();
 
+	/**
+	 * Country chart
+	 */
 	let ctx = $('#country_chart')[0].getContext('2d');
 	let country_chart;
 
@@ -20,8 +27,6 @@ if($('.covid_page').length > 0) {
 			},
 			success: function(data) {
 				if(data.status === 'success') {
-					console.log(data);
-
 					// Render country chart
 					$('.country_chart').show();
 
@@ -34,7 +39,12 @@ if($('.covid_page').length > 0) {
 							},
 
 							// Configuration options go here
-							options: {},
+							options: {
+								tooltips: {
+									mode: 'index',
+									intersect: true,
+								},
+							},
 						});
 					} else {
 						country_chart.data = {
@@ -45,6 +55,8 @@ if($('.covid_page').length > 0) {
 						country_chart.update();
 					}
 				} else {
+					$('.country_chart').hide();
+
 					let error_message = data.error;
 					$('.covid_results .error_message').text(error_message).fadeIn(300);
 				}

@@ -7,6 +7,14 @@
       display: inline-block;
       font-size: 28px;
     }
+
+    span {
+      display: inherit;
+    }
+
+    .select2-container {
+      margin: 0 auto;
+    }
   }
 
   .error_message {

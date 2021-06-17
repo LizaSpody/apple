@@ -1,3 +1,11 @@
+.single-product {
+  img {
+    width: auto !important;
+    margin: 0 auto;
+    max-height: 500px;
+  }
+}
+
 .single-product-info {
   .product-body {
     .product-price {
@@ -10,7 +18,7 @@
         font-size: 22px;
       }
 
-      .onsale {
+      .current_price {
         font-weight: fontweight(bold);
         line-height: 30px;
         color: $color-dark;

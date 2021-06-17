@@ -24,8 +24,11 @@ global $temp_html_dir;
 
 <?php
 	echo $header->get_mobile_menu(); // TODO: not ready yet
-	echo $header->get_wishlist(); // TODO: not ready yet
-	echo $header->get_cart(); // TODO: not ready yet
+	//echo $header->get_wishlist(); // TODO: not ready yet
+
+	echo '<div id="offcanvas-cart" class="offcanvas offcanvas-cart theme1">';
+	woocommerce_mini_cart();
+	echo '</div>';
 ?>
 
 <!-- header start -->

@@ -131,25 +131,25 @@ HTML;
 					<a href="compare.html">
 						<span class="position-relative">
 							<i class="icon-shuffle"></i>
-							<span class="badge cbdg1">1</span>
+							<span class="badge cbdg1"></span>
 						</span>
 					</a>
 				</li>
 				<li>
-					<a class="offcanvas-toggle" href="#offcanvas-wishlist">
+					<a class="header_wishlist_icon offcanvas-toggle" href="#offcanvas-wishlist">
 						<span class="position-relative">
 							<i class="icon-heart"></i>
-							<span class="badge cbdg1">3</span>
+							<span class="badge cbdg1 heart"></span>
 						</span>
 					</a>
 				</li>
 				<li class="mr-0 cart-block position-relative">
-					<a class="offcanvas-toggle" href="#offcanvas-cart">
+					<a class="header_cart_icon offcanvas-toggle" href="#offcanvas-cart">
 						<span class="position-relative">
 							<i class="icon-bag"></i>
-							<span class="badge cbdg1">3</span>
+							<span class="badge cbdg1"></span>
 						</span>
-						<span class="cart-total position-relative">$90.00</span>
+						<span class="cart-total position-relative"></span>
 					</a>
 				</li>
 				<!-- cart block end -->
@@ -361,64 +361,6 @@ HTML;
 		</ul>
 		<a href="wishlist.html" class="btn theme--btn-default btn--lg d-block d-sm-inline-block rounded-5 mt-30">view
 			wishlist</a>
-	</div>
-</div>
-HTML;
-
-		return $block;
-	}
-
-	/**
-	 * Cart
-	 */
-	function get_cart() {
-		global $temp_html_dir;
-
-		$block = <<<HTML
-<div id="offcanvas-cart" class="offcanvas offcanvas-cart theme1">
-	<div class="inner">
-		<div class="head d-flex flex-wrap justify-content-between">
-			<span class="title">Cart</span>
-			<button class="offcanvas-close">×</button>
-		</div>
-		<ul class="minicart-product-list">
-			<li>
-				<a href="single-product.html" class="image"><img src="{$temp_html_dir}assets/img/product/1.jpg"
-																 alt="Cart product Image"></a>
-				<div class="content">
-					<a href="single-product.html" class="title">Walnut Cutting Board</a>
-					<span class="quantity-price">1 x <span class="amount">$100.00</span></span>
-					<a href="#" class="remove">×</a>
-				</div>
-			</li>
-			<li>
-				<a href="single-product.html" class="image"><img src="{$temp_html_dir}assets/img/product/2.jpg"
-																 alt="Cart product Image"></a>
-				<div class="content">
-					<a href="single-product.html" class="title">Lucky Wooden Elephant</a>
-					<span class="quantity-price">1 x <span class="amount">$35.00</span></span>
-					<a href="#" class="remove">×</a>
-				</div>
-			</li>
-			<li>
-				<a href="single-product.html" class="image"><img src="{$temp_html_dir}assets/img/product/3.jpg"
-																 alt="Cart product Image"></a>
-				<div class="content">
-					<a href="single-product.html" class="title">Fish Cut Out Set</a>
-					<span class="quantity-price">1 x <span class="amount">$9.00</span></span>
-					<a href="#" class="remove">×</a>
-				</div>
-			</li>
-		</ul>
-		<div class="sub-total d-flex flex-wrap justify-content-between">
-			<strong>Subtotal :</strong>
-			<span class="amount">$144.00</span>
-		</div>
-		<a href="cart.html" class="btn theme--btn-default btn--lg d-block d-sm-inline-block rounded-5 mr-sm-2">view
-			cart</a>
-		<a href="checkout.html"
-		   class="btn theme-btn--dark1 btn--lg d-block d-sm-inline-block mt-4 mt-sm-0 rounded-5">checkout</a>
-		<p class="minicart-message">Free Shipping on All Orders Over $100!</p>
 	</div>
 </div>
 HTML;

@@ -14,6 +14,20 @@ function apple_widget_areas() {
 		'after_sidebar'  => '',
 	) );
 
+	// Sidebar
+	register_sidebar( array(
+		'name'          => __('Store Sidebar'),
+		'id'            => 'store_sidebar',
+		'description'   => '',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+		'before_sidebar' => '',
+		'after_sidebar'  => '',
+	) );
+
 	// Footer Column 1
 	register_sidebar( array(
 		'name'          => __('Footer Column 1'),

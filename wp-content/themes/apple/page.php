@@ -1,7 +1,7 @@
 <?php
 $title = get_the_title();
 $html_thumbnail = get_the_post_thumbnail();
-$content = get_the_content();
+$content = apply_filters('the_content', get_the_content());
 
 get_header();
 

@@ -17,27 +17,23 @@ if ( post_password_required() ) { ?>
 	<?php
 	return;
 }
-?>
 
+if(have_comments()) {
+	$comments_num = get_comments_number();
+
+	$comments_text_count = decl_of_num($comments_num, array(
+		__('%d comment', 'apple'),
+		_x('%d comments', '2-4', 'apple'),
+		__('%d comments', 'apple'),
+	));
+}
+?>
 <!-- You can start editing here. -->
 
 <?php if ( have_comments() ) : ?>
 	<h3 id="comments">
 		<?php
-		if ( 1 == get_comments_number() ) {
-			printf(
-				/* translators: %s: Post title. */
-				__( 'One response to %s' ),
-				'&#8220;' . get_the_title() . '&#8221;'
-			);
-		} else {
-			printf(
-				/* translators: 1: Number of comments, 2: Post title. */
-				_n( '%1$s response to %2$s', '%1$s responses to %2$s', get_comments_number() ),
-				number_format_i18n( get_comments_number() ),
-				'&#8220;' . get_the_title() . '&#8221;'
-			);
-		}
+			echo $comments_text_count;
 		?>
 	</h3>
 

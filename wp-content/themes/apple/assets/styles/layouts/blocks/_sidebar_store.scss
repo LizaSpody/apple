@@ -1,0 +1,71 @@
+.store_sidebar {
+  h4.sidebar_filters_title {
+    font-family: $gilroyMedium;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    color: #1d1d1d;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #ebebeb;
+    text-transform: capitalize;
+  }
+
+  .yith-wcan-filter {
+    h4.filter-title {
+      font-family: $gilroyMedium;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      color: #1d1d1d;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      display: block;
+      border-bottom: 1px solid #ebebeb;
+      text-transform: capitalize;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 60px;
+        height: 2px;
+        background: #f33535;
+      }
+    }
+
+    .filter-content {
+      ul.filter-items {
+        li.filter-item {
+          margin-bottom: 10px;
+
+          label {
+            cursor: pointer;
+
+            &:hover {
+              input[type="checkbox"] {
+                border-color: $theme-color;
+              }
+            }
+
+            input[type="checkbox"] {
+              display: inline-block;
+              vertical-align: sub;
+              width: 15px;
+              height: 15px;
+              border: 1px solid #ebebeb;
+              border-radius: 3px;
+              margin-right: 12px;
+              left: 0;
+              top: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
